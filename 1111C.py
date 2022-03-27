@@ -26,8 +26,6 @@ def checkTotalAvengers(avengers, left, right):
     totalAvengers = upperBound(right, avengers) - lowerBound(left,avengers)
 
     return totalAvengers
-    
-
 
 def findMinimumPower(left, right, A, B, avengers):
     totalAvengers = checkTotalAvengers(avengers, left, right)
@@ -43,7 +41,6 @@ def findMinimumPower(left, right, A, B, avengers):
     minRight = findMinimumPower(middle + 1, right, A, B, avengers)
 
     return min((minLeft + minRight), calcPower(left, right,B,totalAvengers))
-
 
 
 if __name__ == '__main__':
